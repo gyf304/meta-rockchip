@@ -7,6 +7,7 @@ DEPENDS += "openssl-native"
 
 SRC_URI = " \
 	git://github.com/rockchip-linux/kernel.git;branch=release-4.4; \
+	file://miniarm-dts.patch \
 "
 
 SRCREV = "4311650fc8ae85d181313f08ab482e3dacc7bf4d"
