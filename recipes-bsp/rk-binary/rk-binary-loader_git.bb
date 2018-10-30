@@ -6,8 +6,8 @@ NO_GENERIC_LICENSE[BINARY] = "LICENSE.TXT"
 
 DEPENDS = "rk-binary-native"
 
-SRC_URI = "git://github.com/rockchip-linux/rkbin.git"
-SRCREV = "f64ded672836b47db3f6a0d04d8ccb4180fb3d55"
+SRC_URI = "git://github.com/rockchip-linux/rkbin.git;branch=yocto-old"
+SRCREV = "784b3ef28e746e6e3ddb6fe13421a42c374c9bb4"
 S = "${WORKDIR}/git"
 
 LOADER_rk3399 ?= "rk33/rk3399_loader_*.bin"

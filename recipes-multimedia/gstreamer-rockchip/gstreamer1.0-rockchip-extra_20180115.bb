@@ -6,6 +6,9 @@ include gstreamer1.0-rockchip-extra.inc
 TAG = "release_${PV}"
 SRC_URI = " \
 	git://github.com/rockchip-linux/gstreamer-rockchip-extra.git;tag=${TAG};nobranch=1 \
+	file://common-inline.patch \
 "
 
 S = "${WORKDIR}/git"
+
+TARGET_CFLAGS += "-Wno-error=maybe-uninitialized"
