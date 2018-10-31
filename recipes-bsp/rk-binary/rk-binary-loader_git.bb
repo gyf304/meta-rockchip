@@ -16,8 +16,6 @@ SRC_URI[license.md5sum] = "564e729dd65db6f65f911ce0cd340cf9"
 SRCREV = "323ec3b55f84836ba105e131365c4da27ad68f44"
 S = "${WORKDIR}/git"
 
-LOADER_rk3399 ?= "bin/rk33/rk3399_loader_*.bin"
-
 MINILOADER_rk3328 ?= "bin/rk33/rk3328_miniloader_*.bin"
 MINILOADER_rk3399 ?= "bin/rk33/rk3399_miniloader_v*.bin"
 
