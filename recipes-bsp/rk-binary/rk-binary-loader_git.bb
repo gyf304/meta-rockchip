@@ -8,7 +8,7 @@ DEPENDS = "rk-binary-native"
 
 SRC_URI = " \
 	git://github.com/rockchip-linux/rkbin.git;branch=master \
-	https://raw.githubusercontent.com/rockchip-linux/rkbin/yocto-old/LICENSE.TXT;md5=564e729dd65db6f65f911ce0cd340cf9;name=license \
+	https://raw.githubusercontent.com/rockchip-linux/rkbin/yocto-old/LICENSE.TXT;name=license \
 "
 
 SRC_URI[license.md5sum] = "564e729dd65db6f65f911ce0cd340cf9"
