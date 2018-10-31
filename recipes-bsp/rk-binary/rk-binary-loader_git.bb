@@ -8,8 +8,10 @@ DEPENDS = "rk-binary-native"
 
 SRC_URI = " \
 	git://github.com/rockchip-linux/rkbin.git;branch=master \
-	https://raw.githubusercontent.com/rockchip-linux/rkbin/yocto-old/LICENSE.TXT \
+	https://raw.githubusercontent.com/rockchip-linux/rkbin/yocto-old/LICENSE.TXT;md5=564e729dd65db6f65f911ce0cd340cf9;name=license \
 "
+
+SRC_URI[license.md5sum] = "564e729dd65db6f65f911ce0cd340cf9"
 
 SRCREV = "323ec3b55f84836ba105e131365c4da27ad68f44"
 S = "${WORKDIR}/git"
