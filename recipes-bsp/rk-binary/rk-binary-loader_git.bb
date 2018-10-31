@@ -19,7 +19,7 @@ S = "${WORKDIR}/git"
 LOADER_rk3399 ?= "bin/rk33/rk3399_loader_*.bin"
 
 MINILOADER_rk3328 ?= "bin/rk33/rk3328_miniloader_*.bin"
-MINILOADER_rk3399 ?= "bin/rk33/rk3399_miniloader_*.bin"
+MINILOADER_rk3399 ?= "bin/rk33/rk3399_miniloader_v*.bin"
 
 DDR_rk3328 ?= "bin/rk33/rk3328_ddr_786MHz_*.bin"
 DDR_rk3399 ?= "bin/rk33/rk3399_ddr_800MHz_*.bin"
