@@ -40,24 +40,7 @@ do_deploy () {
 	[ ${LOADER} ] && cp ${S}/${LOADER} ${RKBINARY_DEPLOY_DIR}/${LOADER_BIN}
 	[ ${ATF} ] && cp ${S}/${ATF} ${RKBINARY_DEPLOY_DIR}/${ATF_BIN}
 
-	# Don't remove it!
-	echo "done"
-}
-
-deploy_prebuilt_image () {
-	install -d ${RKBINARY_DEPLOY_DIR}
-	[ -e {S}/img/${SOC_FAMILY}/${UBOOT_IMG} ] && \
-		cp ${S}/img/${SOC_FAMILY}/${UBOOT_IMG} ${RKBINARY_DEPLOY_DIR}/${UBOOT_IMG}
-	[ -e ${S}/img/${SOC_FAMILY}/${TRUST_IMG}  ] && \
-		cp ${S}/img/${SOC_FAMILY}/${TRUST_IMG} ${RKBINARY_DEPLOY_DIR}/${TRUST_IMG}
-}
-
-do_deploy_append_rk3328 () {
-	deploy_prebuilt_image
-}
-
-do_deploy_append_rk3399 () {
-	deploy_prebuilt_image
+	:
 }
 
 addtask deploy before do_build after do_compile
