@@ -39,6 +39,7 @@ do_install () {
 
 PACKAGES =+ "${PN}-wifi \
 	${PN}-bt \
+	${PN}-camera \
 "
 
 FILES_${PN}-wifi = "/system/etc/* /etc/firmware/*"
