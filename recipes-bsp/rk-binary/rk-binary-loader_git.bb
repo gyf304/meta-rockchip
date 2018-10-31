@@ -1,22 +1,26 @@
 DESCRIPTION = "Rockchip binary loader"
 
 LICENSE = "BINARY"
-LIC_FILES_CHKSUM = "file://LICENSE.TXT;md5=564e729dd65db6f65f911ce0cd340cf9"
+LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE.TXT;md5=564e729dd65db6f65f911ce0cd340cf9"
 NO_GENERIC_LICENSE[BINARY] = "LICENSE.TXT"
 
 DEPENDS = "rk-binary-native"
 
-SRC_URI = "git://github.com/rockchip-linux/rkbin.git;branch=yocto-old"
-SRCREV = "784b3ef28e746e6e3ddb6fe13421a42c374c9bb4"
+SRC_URI = " \
+	git://github.com/rockchip-linux/rkbin.git;branch=master \
+	https://raw.githubusercontent.com/rockchip-linux/rkbin/yocto-old/LICENSE.TXT \
+"
+
+SRCREV = "323ec3b55f84836ba105e131365c4da27ad68f44"
 S = "${WORKDIR}/git"
 
-LOADER_rk3399 ?= "rk33/rk3399_loader_*.bin"
+LOADER_rk3399 ?= "bin/rk33/rk3399_loader_*.bin"
 
-MINILOADER_rk3328 ?= "rk33/rk3328_miniloader_*.bin"
-MINILOADER_rk3399 ?= "rk33/rk3399_miniloader_*.bin"
+MINILOADER_rk3328 ?= "bin/rk33/rk3328_miniloader_*.bin"
+MINILOADER_rk3399 ?= "bin/rk33/rk3399_miniloader_*.bin"
 
-DDR_rk3328 ?= "rk33/rk3328_ddr_786MHz_*.bin"
-DDR_rk3399 ?= "rk33/rk3399_ddr_800MHz_*.bin"
+DDR_rk3328 ?= "bin/rk33/rk3328_ddr_786MHz_*.bin"
+DDR_rk3399 ?= "bin/rk33/rk3399_ddr_800MHz_*.bin"
 
 inherit deploy
 
