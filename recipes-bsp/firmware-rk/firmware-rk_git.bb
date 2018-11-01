@@ -31,7 +31,7 @@ do_install () {
 	cp -rf ${S}/etc/cam_iq/* ${D}/etc/cam_iq/
 
 	[ -z "${DEFAULT_ROCKCHIP_CAM_IQ_XML}" ] && \
-	[-f "${D}/etc/cam_iq/${DEFAULT_ROCKCHIP_CAM_IQ_XML}" ] && \
+	[ -f "${D}/etc/cam_iq/${DEFAULT_ROCKCHIP_CAM_IQ_XML}" ] && \
 	ln -s "/etc/cam_iq/${DEFAULT_ROCKCHIP_CAM_IQ_XML}" ${D}/etc/cam_iq.xml
 
 	:
