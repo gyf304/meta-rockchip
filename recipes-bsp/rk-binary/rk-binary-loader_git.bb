@@ -52,6 +52,7 @@ do_compile () {
 		trust_merger $trust_file
 		mv trust.img $OUT_PATH/$(basename "$trust_file" | cut -d"." -f1).img
 	done
+	:
 }
 
 do_deploy () {
