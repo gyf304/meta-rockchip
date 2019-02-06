@@ -13,7 +13,7 @@ SRC_URI = " \
 
 SRC_URI[license.md5sum] = "564e729dd65db6f65f911ce0cd340cf9"
 
-SRCREV = "323ec3b55f84836ba105e131365c4da27ad68f44"
+SRCREV = "6a74b3c5e77b513c321e5fd1891578041117ac2e"
 S = "${WORKDIR}/git"
 
 MINILOADER_rk3328 ?= "${S}/bin/rk33/rk3328_miniloader_*.bin"
@@ -52,7 +52,6 @@ do_compile () {
 		trust_merger $trust_file
 		mv trust.img $OUT_PATH/$(basename "$trust_file" | cut -d"." -f1).img
 	done
-	:
 }
 
 do_deploy () {
