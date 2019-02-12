@@ -24,13 +24,13 @@ TRUST_IMG = "rk-binary/trust.img"
 # Not from rk-binary
 UBOOT_IMG = "u-boot.img"
 
-GPTIMG_APPEND_rk3036 = "console=tty1 console=ttyS2,115200n8 rw \
+GPTIMG_APPEND_rk3036 ?= "console=tty1 console=ttyS2,115200n8 rw \
 	root=PARTUUID=69dad710-2c rootfstype=ext4 init=/sbin/init rootwait"
-GPTIMG_APPEND_rk3288 = "console=tty1 console=ttyS2,115200n8 rw \
+GPTIMG_APPEND_rk3288 ?= "console=tty1 console=ttyS2,115200n8 rw \
 	root=PARTUUID=69dad710-2c rootfstype=ext4 init=/sbin/init"
-GPTIMG_APPEND_rk3328 = "earlycon=uart8250,mmio32,0xff130000 rw \
+GPTIMG_APPEND_rk3328 ?= "earlycon=uart8250,mmio32,0xff130000 rw \
 	root=PARTUUID=b921b045-1d rootwait rootfstype=ext4 init=/sbin/init rootwait"
-GPTIMG_APPEND_rk3399 = "console=tty1 console=ttyFIQ0,1500000n8 rw \
+GPTIMG_APPEND_rk3399 ?= "console=tty1 console=ttyFIQ0,1500000n8 rw \
 	root=PARTUUID=b921b045-1d rootfstype=ext4 init=/sbin/init rootwait"
 
 # default partitions [in Sectors]
