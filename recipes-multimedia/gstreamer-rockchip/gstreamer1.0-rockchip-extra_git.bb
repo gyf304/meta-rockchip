@@ -8,6 +8,6 @@ include gstreamer1.0-rockchip-extra.inc
 
 SRCBRANCH ?= "master"
 SRCREV = "${AUTOREV}"
-SRC_URI = "git://github.com/rockchip-linux/gstreamer-rockchip-extra.git;branch=${SRCBRANCH}"
+SRC_URI = "git://github.com/gyf304/gstreamer-rockchip-extra.git;branch=${SRCBRANCH}"
 
 S = "${WORKDIR}/git"
